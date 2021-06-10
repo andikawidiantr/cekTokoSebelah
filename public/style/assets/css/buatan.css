@@ -1,0 +1,60 @@
+.buton {
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: white;
+    color: black;
+    padding: 6px 14px;
+    font-size: 15px;
+    cursor: pointer;
+  }
+  /* Green */
+  .success {
+    border-color: #4CAF50;
+    color: green;
+  }
+  
+  .success:hover {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  /* Orange */
+  .warning {
+    border-color: #ff9800;
+    color: orange;
+  }
+  
+  .warning:hover {
+    background: #ffee00;
+    color: white;
+  }
+  .Times{
+      font-family:Arial,"Times New Roman",Verdana,Tahoma,serif;
+  }
+  
+  /* Blue */
+  .info {
+    border-color: #0051ff;
+    color: rgb(30, 34, 255)
+  }
+  
+  .info:hover {
+    background: #2196F3;
+    color: white;
+  }
+
+  /* Red */
+.danger {
+    border-color: #f44336;
+    color: red
+  }
+  
+.danger:hover {
+    background: #f44336;
+    color: white;
+}
+
+
+.mul-select{
+    width: 100%;
+}
