@@ -65,16 +65,17 @@
                                 <tr>
                                     <th>Status</th>
                                     <td>
-                                        @if ($data_transaksi->status == 'delivered' || $data_transaksi->status =='unverified')
-                                            @if ($data_transaksi->status == 'delivered')
-                                            <form action="/admin/transaksi/{{ $data_transaksi->id }}/status" method="POST">
-                                                @csrf
-                                                <select class="form-control " name="pilih_status" id="pilih_status">
-                                                    <option selected value="{{ $data_transaksi->status}}">
-                                                        {{ $data_transaksi->status}}</option>
-                                                    <option value="success">success</option>
-                                                </select>
-                                            </form>
+                                        @if ($data_transaksi->status == 'delivered' || $data_transaksi->status
+                                        =='unverified')
+                                        @if ($data_transaksi->status == 'delivered')
+                                        <form action="/admin/transaksi/{{ $data_transaksi->id }}/status" method="POST">
+                                            @csrf
+                                            <select class="form-control " name="pilih_status" id="pilih_status">
+                                                <option selected value="{{ $data_transaksi->status}}">
+                                                    {{ $data_transaksi->status}}</option>
+                                                <option value="success">success</option>
+                                            </select>
+
                                             @else
                                             <form action="/admin/transaksi/{{ $data_transaksi->id }}/verifikasi"
                                                 method="POST">
@@ -85,13 +86,13 @@
                                                     <option value="verified">verified</option>
                                                     <option value="canceled">canceled</option>
                                                 </select>
-                                            </form>
-                                            @endif
 
-                                        @else
+                                                @endif
 
-                                            {{ $data_transaksi->status}}
-                                        @endif
+                                                @else
+
+                                                {{ $data_transaksi->status}}
+                                                @endif
                                     </td>
                                 </tr>
 

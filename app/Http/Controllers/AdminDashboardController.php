@@ -16,6 +16,12 @@ use App\TransactionsDetail;
 
 class AdminDashboardController extends Controller
 {
+  
+    public function __construct()
+    {   
+        $this->middleware('auth:admin');
+    }
+
     public function index(){
        $data_transaksi = Transactions::orderBy('created_at','desc')->get();
        $hariini = Carbon::now()->setTimezone('GMT+8');

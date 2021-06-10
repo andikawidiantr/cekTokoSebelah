@@ -170,11 +170,9 @@ class ProductController extends Controller
     // sampah
     public function trash()
     {
-        // mengampil data guru yang sudah dihapus 
+     
         $data = product::onlyTrashed()->get();
-        //$data->RelasiCategory(product_id,$id)->get();
-        // $productCategoryDetail = categorydetail::onlyTrashed()->get();
-        return view('product.trash',compact(['data'=>$data]));
+        return view('product.trash',compact(['data']));
     }
 
     public function destroyfoto(productimage $productimage)
